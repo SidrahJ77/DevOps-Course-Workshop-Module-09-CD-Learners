@@ -33,3 +33,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Docker build
+      run: docker build --tag sidrahj/exercise-9 .
+
+    - name: login
+      run: docker login
+
+    - name: docker push
+      run: docker push  sidrahj/exercise-9
+
+
+
